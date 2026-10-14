@@ -100,7 +100,7 @@
 
   /* 7. Pop-up infolettre
         - s'ouvre avec le bouton « M'inscrire » à tout moment
-        - s'ouvre seul après 30 secondes, sauf s'il a été fermé 2 fois (pause de 5 jours)
+        - s'ouvre seul après 60 secondes, sauf s'il a été fermé 2 fois (pause de 5 jours)
         - ne s'ouvre pas seul pendant que la personne regarde le formulaire de don */
   var overlay = document.getElementById("nl-overlay");
   if (!overlay) return;
@@ -147,5 +147,5 @@
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && overlay.classList.contains("show")) close();
   });
-  if (!(state.until && Date.now() < state.until)) setTimeout(autoOpen, 30000);
+  if (!(state.until && Date.now() < state.until)) setTimeout(autoOpen, 60000);
 })();
