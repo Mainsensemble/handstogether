@@ -100,7 +100,8 @@
 
   /* 7. Pop-up infolettre
         - s'ouvre avec le bouton « M'inscrire » à tout moment
-        - s'ouvre seul après 60 secondes, sauf s'il a été fermé 2 fois (pause de 5 jours)
+        - s'ouvre seul sur ordinateur seulement, après 60 secondes ET la moitié de la page lue,
+          sauf s'il a été fermé 2 fois (pause de 5 jours)
         - ne s'ouvre pas seul pendant que la personne regarde le formulaire de don */
   var overlay = document.getElementById("nl-overlay");
   if (!overlay) return;
@@ -147,5 +148,19 @@
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && overlay.classList.contains("show")) close();
   });
-  if (!(state.until && Date.now() < state.until)) setTimeout(autoOpen, 60000);
+  /* Ouverture automatique : ordinateur seulement (jamais sur téléphone ni tablette),
+     après 60 secondes ET quand la personne a lu au moins la moitié de la page. */
+  var isComputer = window.matchMedia &&
+    window.matchMedia("(min-width: 1025px) and (hover: hover) and (pointer: fine)").matches;
+  if (isComputer && !(state.until && Date.now() < state.until)) {
+    var timeOk = false, scrollOk = false;
+    function readHalf() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      return h <= 0 || window.scrollY / h >= 0.5;
+    }
+    function check() { if (timeOk && scrollOk) { window.removeEventListener("scroll", onScroll); autoOpen(); } }
+    function onScroll() { if (!scrollOk && readHalf()) { scrollOk = true; check(); } }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    setTimeout(function () { timeOk = true; scrollOk = scrollOk || readHalf(); check(); }, 60000);
+  }
 })();
