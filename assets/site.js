@@ -41,6 +41,47 @@
     });
   }
 
+  /* 3b. Boutons « Donnez » : aller directement au formulaire Donorbox.
+         Les photos qui se chargent plus haut peuvent déplacer la page ;
+         on réajuste donc la position pendant quelques secondes,
+         sauf si la personne fait défiler elle-même. */
+  var form = document.getElementById("formulaire-don");
+  if (form) {
+    var userMoved = false;
+    ["wheel", "touchstart", "keydown"].forEach(function (ev) {
+      window.addEventListener(ev, function () { userMoved = true; }, { passive: true });
+    });
+    function headerH() {
+      var h = document.querySelector(".site-header");
+      return (h ? h.getBoundingClientRect().height : 0) + 12;
+    }
+    function goToForm(smooth) {
+      var y = form.getBoundingClientRect().top + window.scrollY - headerH();
+      window.scrollTo({ top: Math.max(0, y), behavior: smooth ? "smooth" : "auto" });
+    }
+    function keepOnForm() {
+      userMoved = false;
+      [1000, 1800, 2800, 4000].forEach(function (t) {
+        setTimeout(function () {
+          if (userMoved) return;
+          var off = form.getBoundingClientRect().top - headerH();
+          if (Math.abs(off) > 6) goToForm(false);
+        }, t);
+      });
+    }
+    document.querySelectorAll('a[href="#formulaire-don"]').forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        goToForm(true);
+        if (history.replaceState) history.replaceState(null, "", "#formulaire-don");
+        keepOnForm();
+      });
+    });
+    if (location.hash === "#formulaire-don" || location.hash === "#donnez" || location.hash === "#donate") {
+      window.addEventListener("load", function () { goToForm(false); keepOnForm(); });
+    }
+  }
+
   /* 4. Bouton « Donnez » flottant Donorbox : ordinateur seulement
         (grand écran + souris). Jamais sur téléphone ni tablette. */
   var sticky = document.getElementById("donorbox-sticky-config");
