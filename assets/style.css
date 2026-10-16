@@ -331,9 +331,6 @@ hr.sep{border-top:3px solid var(--blue);max-width:120px;margin:40px auto 34px}
 .amount-list li{position:relative;padding:6px 10px 6px 30px;line-height:1.45}
 .amount-list li::before{content:"";position:absolute;left:11px;top:.85em;width:9px;height:9px;border-radius:50%;background:var(--blue)}
 .amount-list strong{font:800 1.12rem var(--head);color:var(--blue-dark)}
-.amount-list li.feature{background:#fff1df;border-radius:var(--r);margin:4px 0}
-.amount-list li.feature::before{background:var(--orange)}
-.amount-list li.feature strong{color:var(--orange-text)}
 .ba-title{margin-bottom:.2em}
 .who-row.who-single{grid-template-columns:1fr;max-width:820px}
 .who-row.who-single img{height:auto;aspect-ratio:16/10}
