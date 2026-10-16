@@ -348,3 +348,7 @@ hr.sep{border-top:3px solid var(--blue);max-width:120px;margin:40px auto 34px}
 @media (max-width:900px){.founders{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.founders{grid-template-columns:1fr}.founder{flex-direction:row}.founder img{width:38%;aspect-ratio:auto;min-height:100%}}
 #formulaire-don{scroll-margin-top:calc(var(--header-h) + 12px)}
+.who-intro{margin-top:4px}
+.who-intro figure{margin:6px 0 0}
+.who-intro img{border-radius:var(--r);width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 60%}
+@media (min-width:861px){.who-intro{grid-template-columns:1.15fr 1fr}}
