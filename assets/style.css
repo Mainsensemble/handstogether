@@ -375,3 +375,10 @@ hr.sep{border-top:3px solid var(--blue);max-width:120px;margin:40px auto 34px}
   .hero-grid figure img{aspect-ratio:4/3;object-fit:cover;object-position:center 40%}
 }
 @media (min-width:1400px){.hero .wrap{max-width:1280px}}
+.refuge-intro{max-width:860px}
+.refuge-intro .problems{margin-bottom:1em}
+.vision-row{margin-top:36px;align-items:center}
+.vision-row figure{margin:0}
+.vision-row figure img{width:100%;border-radius:var(--r);aspect-ratio:4/3;object-fit:cover}
+.section.blue .refuge-give{max-width:700px;margin:30px auto 0}
+@media (max-width:860px){.vision-row figure{order:-1}}
