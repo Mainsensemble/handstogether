@@ -382,3 +382,4 @@ hr.sep{border-top:3px solid var(--blue);max-width:120px;margin:40px auto 34px}
 .vision-row figure img{width:100%;border-radius:var(--r);aspect-ratio:4/3;object-fit:cover}
 .section.blue .refuge-give{max-width:700px;margin:30px auto 0}
 @media (max-width:860px){.vision-row figure{order:-1}}
+.vision-grid .vision-love strong{color:var(--gold)}
