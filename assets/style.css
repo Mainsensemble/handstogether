@@ -383,3 +383,6 @@ hr.sep{border-top:3px solid var(--blue);max-width:120px;margin:40px auto 34px}
 .section.blue .refuge-give{max-width:700px;margin:30px auto 0}
 @media (max-width:860px){.vision-row figure{order:-1}}
 .vision-grid .vision-love strong{color:var(--gold)}
+.vision-grid div strong{color:var(--gold)}
+.refuge-intro{max-width:none}
+p,li,figcaption{text-wrap:pretty}
