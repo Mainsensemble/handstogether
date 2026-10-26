@@ -369,3 +369,9 @@ hr.sep{border-top:3px solid var(--blue);max-width:120px;margin:40px auto 34px}
   .hero p{margin:0 0 .6em;line-height:1.5}
   .hero .btn-row{margin-top:.8em}
 }
+@media (min-width:861px){
+  .hero-grid{grid-template-columns:.92fr 1.08fr;gap:32px;align-items:center}
+  .hero-grid figure{margin:0}
+  .hero-grid figure img{aspect-ratio:4/3;object-fit:cover;object-position:center 40%}
+}
+@media (min-width:1400px){.hero .wrap{max-width:1280px}}
