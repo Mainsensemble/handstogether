@@ -359,3 +359,5 @@ hr.sep{border-top:3px solid var(--blue);max-width:120px;margin:40px auto 34px}
 .verse-thanks{margin:22px auto 0}
 .video-short-title{margin:34px 0 0}
 .video-short-title + .video-short{margin-top:12px}
+.home-need{background:#fff4e6;border-left:4px solid var(--orange);border-radius:var(--r);padding:10px 14px;line-height:1.5}
+.home-need a{font-weight:700;white-space:nowrap}
