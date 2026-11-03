@@ -9,6 +9,12 @@
   function store(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
   function read(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
 
+  /* 0. Annonces temporaires : cachées automatiquement après leur date (data-until) */
+  document.querySelectorAll("[data-until]").forEach(function (el) {
+    var t = Date.parse(el.getAttribute("data-until") + "T00:00:00");
+    if (!isNaN(t) && Date.now() >= t) el.remove();
+  });
+
   /* 1. Nettoyer ?lang=manual / ?from=auto de l'adresse affichée */
   try {
     var url = new URL(location.href);
