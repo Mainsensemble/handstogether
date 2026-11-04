@@ -397,3 +397,5 @@ p,li,figcaption{text-wrap:pretty}
 @media (max-width:640px){.match-bar{font-size:.95rem;padding:13px 12px}}
 #haut,#top{scroll-margin-top:0}
 .match-box .match-example{font:800 1.1rem var(--head);color:var(--orange-text);margin:.5em 0}
+.match-bar .fn a{color:#fff;margin-left:0}
+.match-box .fn a{color:var(--orange-text)}
