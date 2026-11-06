@@ -462,3 +462,14 @@ p,li,figcaption{text-wrap:pretty}
   .noel-grid figure{order:2}
 }
 .noel .btn-noel{margin:.9em 0 1em}
+@media (min-width:1400px){.noel .wrap{max-width:1280px}}
+.noel .btn-noel{margin:.9em 0 1.3em}
+.noel-garland{max-width:340px;margin:0 auto -4px}
+@media (min-width:861px){
+  .noel-eyebrow{margin-bottom:0}
+  .noel h2{margin:.05em 0 .25em}
+  .noel-grid > div > p:first-of-type{margin-bottom:.2em}
+  .noel-list{margin:.1em 0 .2em}
+  .noel-list li{margin:0;line-height:1.3}
+  .noel .btn-noel{margin:.7em 0 1.3em}
+}
