@@ -399,3 +399,16 @@ p,li,figcaption{text-wrap:pretty}
 .match-box .match-example{font:800 1.1rem var(--head);color:var(--orange-text);margin:.5em 0}
 .match-bar .fn a{color:#fff;margin-left:0}
 .match-box .fn a{color:var(--orange-text)}
+/* Campagne de Noël (se cache seule après la date data-until) */
+.section.noel{background:#fdf5ea;border-top:6px solid #b3261e}
+.noel-grid{align-items:center}
+.noel-grid figure{margin:0}
+.noel-grid img{width:100%;border-radius:var(--r);aspect-ratio:4/3;object-fit:cover}
+.noel-eyebrow{color:#b3261e}
+.noel-list{margin:.4em 0 .8em;padding-left:1.2em}
+.noel-list li{margin:.15em 0}
+.noel-punch{font:800 1.08rem var(--head);color:#b3261e}
+.noel .btn-donate{margin-top:.4em}
+.noel-why{margin-top:28px;background:#fff;border-radius:var(--r);padding:16px 20px;border-left:4px solid #b3261e}
+.noel-why h3{margin:0 0 .4em}
+.noel-why p:last-child{margin-bottom:0}
