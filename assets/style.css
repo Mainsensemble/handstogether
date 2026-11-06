@@ -432,3 +432,7 @@ p,li,figcaption{text-wrap:pretty}
 .noel-garland{max-width:760px;margin-bottom:10px}
 .noel-eyebrow{display:flex;align-items:center;gap:.4em}
 .noel-grid img.noel-flakes{height:1.9em;vertical-align:middle;margin:0;flex:none}
+.btn-noel{background:#b3261e;border-color:#b3261e;color:#fff}
+.btn-noel:hover,.btn-noel:focus{background:#8f1d17;border-color:#8f1d17;color:#fff}
+.noel-why-list{margin:.3em 0 0;padding-left:1.2em}
+.noel-why-list li{margin:.45em 0;line-height:1.55}
