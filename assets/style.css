@@ -420,3 +420,4 @@ p,li,figcaption{text-wrap:pretty}
 .noel-photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
 .noel-photos figcaption{font-size:.88rem;margin-top:6px;color:var(--ink-soft,#444)}
 @media (max-width:640px){.noel-photos{grid-template-columns:1fr}}
+.noel-photos{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
