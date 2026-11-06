@@ -421,3 +421,4 @@ p,li,figcaption{text-wrap:pretty}
 .noel-photos figcaption{font-size:.88rem;margin-top:6px;color:var(--ink-soft,#444)}
 @media (max-width:640px){.noel-photos{grid-template-columns:1fr}}
 .noel-photos{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.noel-grid figcaption{font-size:.9rem;margin-top:6px;text-align:center}
