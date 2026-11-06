@@ -412,3 +412,11 @@ p,li,figcaption{text-wrap:pretty}
 .noel-why{margin-top:28px;background:#fff;border-radius:var(--r);padding:16px 20px;border-left:4px solid #b3261e}
 .noel-why h3{margin:0 0 .4em}
 .noel-why p:last-child{margin-bottom:0}
+.noel-eyebrow{font-size:1.45rem;letter-spacing:.04em;text-transform:none;font-weight:800;margin-bottom:.35em}
+.noel-grid img{aspect-ratio:4/5;object-position:center 20%}
+@media (max-width:860px){.noel-grid img{aspect-ratio:4/3;object-position:center 22%}}
+.noel-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.noel-photos figure{margin:0}
+.noel-photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
+.noel-photos figcaption{font-size:.88rem;margin-top:6px;color:var(--ink-soft,#444)}
+@media (max-width:640px){.noel-photos{grid-template-columns:1fr}}
