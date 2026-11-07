@@ -474,3 +474,8 @@ p,li,figcaption{text-wrap:pretty}
   .noel .btn-noel{margin:.7em 0 1.3em}
 }
 .noel-surplus{margin:.8em 0 0}
+.noel-count{font-weight:700;color:var(--blue-dark);margin:0 0 .3em}
+.noel-cta{display:flex;align-items:center;flex-wrap:wrap;gap:10px 18px;margin:.7em 0 1.3em}
+.noel .noel-cta .btn-noel{margin:0}
+.noel-double{font:800 1.1rem var(--head);color:#b3261e;display:inline-flex;align-items:center;gap:.3em}
+.noel-double::before{content:"🎁"}
