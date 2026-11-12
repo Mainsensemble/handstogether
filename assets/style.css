@@ -509,3 +509,10 @@ p,li,figcaption{text-wrap:pretty}
   .btn-dot{display:none}
   .btn-2x{color:#ffe0b3}
 }
+
+/* ---- Nov 2026 : Autres façons de donner en orange, choix plus gros ---- */
+#autres-moyens,#other-ways{color:var(--orange-dark);font-size:1.75rem}
+.ways div{font-size:1.22rem;line-height:1.55}
+.ways h3{font-size:1.4rem}
+.ways .nolink{font-size:1.05em}
+@media (max-width:480px){#autres-moyens,#other-ways{font-size:1.5rem}}
