@@ -516,3 +516,8 @@ p,li,figcaption{text-wrap:pretty}
 .ways h3{font-size:1.4rem}
 .ways .nolink{font-size:1.05em}
 @media (max-width:480px){#autres-moyens,#other-ways{font-size:1.5rem}}
+
+/* ---- Nov 2026 : courriel Interac sur une seule ligne ---- */
+@media (min-width:761px){.ways{grid-template-columns:1.3fr 1fr 1fr}}
+.ways div{container-type:inline-size}
+.ways .nolink{display:block;white-space:nowrap;word-break:normal;font-size:min(1.25rem,6.2cqi)}
